@@ -34,8 +34,14 @@ class Program
             // Checking odd and prime
             else
             {
+                    if(userInput % userInput == 0 && userInput % 1 == 0)
+                    {
                     Console.WriteLine("Your number must be an odd number and a prime number as well.");
-                    return; 
+                    }else
+                {
+                    Console.WriteLine("Your number must be an odd number");
+                }
+                
             }
         }
         else
@@ -58,4 +64,4 @@ class Program
 //                       => Odd numbers are prime number , except the even number , 2
 
 // So ,According to definition : I added another if statement below "even number" , the condition if userInput == 2 , if so it is even and prime number
-// Lastly , I don't need to check whether the odd numbers are prime or not anymore
+// Lastly , I check the prime and odd 
