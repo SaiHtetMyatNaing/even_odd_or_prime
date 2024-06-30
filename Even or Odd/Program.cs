@@ -32,16 +32,17 @@ class Program
                 }
             }
             // Checking odd and prime
-            else
+            else 
             {
-                    if(userInput % userInput == 0 && userInput % 1 == 0)
+                    int checkedNum = ((userInput * userInput) - 1) % 24;
+
+                    if(userInput > 3 && checkedNum == 0 )
                     {
-                    Console.WriteLine("Your number must be an odd number and a prime number as well.");
+                      Console.WriteLine("Your number must be an odd number and prime number as well.");
                     }else
                 {
-                    Console.WriteLine("Your number must be an odd number");
+                    Console.WriteLine("Your number must be an odd number.");
                 }
-                
             }
         }
         else
