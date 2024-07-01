@@ -32,18 +32,33 @@ class Program
                 }
             }
             // Checking odd and prime
-            else 
-            {
-                    int checkedNum = ((userInput * userInput) - 1) % 24;
+            else
+            {   
+                // Initializing the empty array to check the factor of a number
+                int[] nums = new int[userInput + 1];
+                int count = 0;             // To check the numbers of "0"
 
-                    if(userInput == 3 || (userInput > 3 && checkedNum == 0) )
-                    {
-                      Console.WriteLine("Your number must be an odd number and prime number as well.");
-                    }else
+                for(int i = 0; i <= userInput; i++)   // Checking whether the remainder is 0 or not
                 {
-                    Console.WriteLine("Your number must be an odd number.");
+                    int answer = userInput % (i + 1);
+                    nums[i] = answer;           // Added to an array
+
+                    if (answer == 0)   
+                    {
+                        count++; 
+                    }
                 }
+                // As there are only 2 factors in prime number , i condition the situation in this way
+                if (count >= 3)
+                {
+                    Console.WriteLine("Your number is and odd number.");
+                }else
+                {
+                    Console.WriteLine("Your number is both an odd and prime number.");
+                }
+
             }
+
         }
         else
         {
