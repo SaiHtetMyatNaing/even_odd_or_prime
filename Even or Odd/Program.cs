@@ -35,18 +35,15 @@ class Program
             else
             {   
                 // Initializing the empty array to check the factor of a number
-                int[] nums = new int[userInput + 1];
+                int[] nums = new int[userInput + 1];     // If i don't add 1 , the items count in the array would be less than userInput , as the array start from 0
                 int count = 0;             // To check the numbers of "0"
 
                 for(int i = 0; i <= userInput; i++)   // Checking whether the remainder is 0 or not
                 {
-                    int answer = userInput % (i + 1);
+                    int answer = userInput % (i + 1);  // I added "1" because I don't want the division starts from "0"
                     nums[i] = answer;           // Added to an array
 
-                    if (answer == 0)   
-                    {
-                        count++; 
-                    }
+                    if (answer == 0) { count++; }                    
                 }
                 // As there are only 2 factors in prime number , i condition the situation in this way
                 if (count >= 3)
